@@ -4,6 +4,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator();
 
+// declare global {
+//     namespace ReactNavigation{
+//         interface 
+//     }
+// }
+
 import Home from '../screens/Home'
 import FrontEnd from '../screens/FrontEnd'
 import BackEnd from '../screens/BackEnd'
@@ -19,9 +25,3 @@ export const Routes = () => {
         </NavigationContainer>
     )
 }
-
-// const styles = StyleSheet.create({
-//     headerMenu: {
-//         backgroundColor: 'black'
-//     }
-// });

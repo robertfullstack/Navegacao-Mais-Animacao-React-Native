@@ -1,55 +1,100 @@
-import React from "react";
-import { View, Text, StyleSheet, ImageBackground, Button } from "react-native";
-import { useNavigation } from '@react-navigation/native'
-
+import React, { useEffect, useRef } from "react";
+import { View, Text, StyleSheet, ImageBackground, Button, Animated } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Home() {
     const { navigate } = useNavigation();
+    const fadeAnim = useRef(new Animated.Value(0)).current;
+    const slideAnim1 = useRef(new Animated.Value(-300)).current;
+    const slideAnim2 = useRef(new Animated.Value(300)).current;
+    const image = require('../../../assets/images/background.jpg');
 
-    const image = require('../../../assets/images/background.jpg')
+    useEffect(() => {
+        Animated.parallel([
+            Animated.timing(fadeAnim, {
+                toValue: 1,
+                duration: 1000,
+                useNativeDriver: true,
+            }),
+            Animated.timing(slideAnim1, {
+                toValue: 0,
+                duration: 800,
+                useNativeDriver: true,
+            }),
+            Animated.timing(slideAnim2, {
+                toValue: 0,
+                duration: 800,
+                useNativeDriver: true,
+            }),
+        ]).start();
+    }, [fadeAnim, slideAnim1, slideAnim2]);
 
     return (
-        <ImageBackground source={image} style={styles.backgroud}>
-            <View style={styles.container}>
-
-                <View>
-                    <Text style={styles.H1}>Escolha Como Será Seu Projeto:</Text>
-                    <View style={styles.containers}>
+        <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
+            <ImageBackground source={image} style={styles.background}>
+                <View style={styles.content}>
+                    <Text style={styles.title}>Escolha Como Será Seu Projeto:</Text>
+                    <Animated.View style={[styles.buttons, { transform: [{ translateX: slideAnim1 }] }]}>
                         <Button title="Front End" onPress={() => { navigate('FrontEnd') }} />
+                    </Animated.View>
+                    <Animated.View style={[styles.buttons, { transform: [{ translateX: slideAnim2 }] }]}>
                         <Button title="Back End" onPress={() => { navigate('BackEnd') }} />
+                    </Animated.View>
+                    <View style={styles.watermarkContainer}>
+                        <Text style={styles.watermarkText}>Projeto Criado por Robert</Text>
                     </View>
-
                 </View>
-            </View>
-        </ImageBackground >
-    )
+            </ImageBackground>
+        </Animated.View>
+    );
 }
 
 const styles = StyleSheet.create({
-    backgroud: {
-        height: '93vh',
-        backgroundSize: '100%'
+    container: {
+        flex: 1,
     },
 
-    container: {
+    background: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
+
+    content: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingHorizontal: 30,
     },
 
-    containers: {
-        flex: 1,
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flexDirection: 'row',
-        padding: 30,
-        backgroundColor: 'rgb(33, 150, 243)',
-        borderRadius: 15
-    },
-
-    H1: {
+    title: {
         color: 'white',
         fontSize: 30,
-        fontWeight: '900'
+        fontWeight: '900',
+        marginBottom: 20,
+    },
+
+    buttons: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgb(33, 150, 243)',
+        borderRadius: 15,
+        padding: 30,
+        marginVertical: 10,
+    },
+
+    watermarkContainer: {
+        position: 'absolute',
+        bottom: 10,
+        right: 10,
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderRadius: 5,
+    },
+
+    watermarkText: {
+        fontSize: 12,
+        fontWeight: 'bold',
+        color: 'black',
     },
 });
