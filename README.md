@@ -9,4 +9,8 @@ Estrutura da Aplicação:
   App.js - Routes com o Home no / principal
     Routes - Pastas Front End & Back End
       Front End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
-      Back End - Uso de <br/>Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
+      Back End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
+
+
+Link para Download do APK:
+  https://expo.dev/accounts/programadorfullstack/projects/Escolha-Sua-LInguagem-React-Native/builds/fab6ff94-3370-40cf-ae7a-bed57d1d680b
