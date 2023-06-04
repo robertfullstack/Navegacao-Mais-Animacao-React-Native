@@ -12,7 +12,7 @@ Estrutura da Aplicação:
       Back End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
 
 
-<image scr="https://ibb.co/vXsrsDB" />
+<image src="https://i.ibb.co/cYbpbxv/Screenshot-20230603-212646.png" />
 
 Link para Download do APK:
   https://expo.dev/accounts/programadorfullstack/projects/Escolha-Sua-LInguagem-React-Native/builds/fab6ff94-3370-40cf-ae7a-bed57d1d680b
