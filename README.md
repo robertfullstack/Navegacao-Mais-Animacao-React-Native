@@ -14,11 +14,12 @@ Estrutura da Aplicação:
 
 <image src="https://i.ibb.co/qRYCMV7/print-result.png" width="240px" height="520px"/>
 
-Donwloads das dependências necessárias: <br/>
-  npm install @react-navigation/native <br/>
-  npm install @react-navigation/stack <br/>
-  npm install @react-navigation/native-stack
-
+<p>Donwloads das dependências necessárias:</p>
+<ul>
+  <li>npm install @react-navigation/native</li>
+  <li>npm install @react-navigation/stack</li>
+  <li>npm install @react-navigation/native-stack</li>
+ </ul>
 
 Link para Download do APK: <br/>
   https://expo.dev/accounts/programadorfullstack/projects/Escolha-Sua-LInguagem-React-Native/builds/fab6ff94-3370-40cf-ae7a-bed57d1d680b
