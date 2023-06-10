@@ -1,16 +1,23 @@
 # Navegacao-Mais-Animacao-React-Native
 
-Projeto Navegação Entre Páginas no React Native e Animações de Entrada.
+<p>Projeto Navegação Entre Páginas no React Native e Animações de Entrada.</p>
 
--npm install Para realizar o download do Node_modules
--npm start Para executar o projeto
+<ul>
+  <li>-npm install Para realizar o download do Node_modules</li>
+  <li>-npm start Para executar o projeto</li>
+</ul>
 
-Estrutura da Aplicação:
-  App.js - Routes com o Home no / principal
-    Routes - Pastas Front End & Back End
-      Front End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
-      Back End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)
-
+<p>Estrutura da Aplicação:</p>
+<ul>
+  <li> App.js - Routes com o Home no / principal</li>
+    <ul>
+      <li>Routes - Pastas Front End & Back End</li>
+        <ul>
+            <li>Front End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)</li> 
+          <li>Back End - Uso de Images(require), estilizações(styles), animação de entreda(useEffect), efeito ao onClick(onPress), animação(Animated.View)</li>
+        </ul>
+    </ul>
+</ul>
 
 <image src="https://i.ibb.co/qRYCMV7/print-result.png" width="240px" height="520px"/>
 
@@ -21,5 +28,7 @@ Estrutura da Aplicação:
   <li>npm install @react-navigation/native-stack</li>
  </ul>
 
-Link para Download do APK: <br/>
-  https://expo.dev/accounts/programadorfullstack/projects/Escolha-Sua-LInguagem-React-Native/builds/fab6ff94-3370-40cf-ae7a-bed57d1d680b
+<p>Link para Download do APK:</p>
+<ul>
+  <li>https://expo.dev/accounts/programadorfullstack/projects/Escolha-Sua-LInguagem-React-Native/builds/fab6ff94-3370-40cf-ae7a-bed57d1d680b</li>
+</ul>
